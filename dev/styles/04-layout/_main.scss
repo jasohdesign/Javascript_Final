@@ -1,0 +1,200 @@
+body{
+    margin:0;
+    background-color: black;
+    background-image: url(../img/star.png);
+    font-family: "Open Sans", sans-serif; 
+    font-size: 1em;
+}
+hr {
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0;
+    max-width: 70vw; 
+}
+h1{
+    font-size: 2.3em;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+}
+h2{
+    margin-top: 1em;
+    font-size: 1.5em;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+}
+.bird-box {
+    position: relative;
+    height: 600px;
+    background-color:black;
+    background-image: url(../img/star.png);
+    background-size: auto 600px;
+    background-position: top center;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+.logo {
+    height: 100px;
+    width: 100%;
+    background-image: url(../img/logowhite.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+}
+.fore-bird {
+    width: 960px;
+    height: 960px;
+    background-image: url(../img/star.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    position: absolute;
+    left: 50%;
+    margin-left: -450px;
+    top: 380px;
+}
+.back-bird {
+    width: 960px;
+    height: 298px;
+    background-image: url(../img/star.png);
+    background-repeat: no-repeat;
+    background-position: top left;
+    position: absolute;
+    left: 50%;
+    margin-left: -480px;
+}
+.circle{
+    margin-top: 100px;
+    border-radius:500px;
+    width:400px;
+    height:400px;
+    opacity:0.7;
+    background: #C0CF3A;
+    text-align: center;
+    position: absolute;
+    margin-left: 20vw;
+}
+.circleImage{
+    margin-top: 30px; 
+}
+.description{
+    color: #A8A8A8;
+    padding: 100px 0;
+    text-align: justify;
+
+}
+.content{
+    max-width: 70vw;
+    margin: 0 auto;
+    text-align: center; 
+}
+#container{
+    width: 100%;
+    height: 600px;
+    position: relative;
+}
+#data-text-box{
+    // height: 100vh;
+    // background-image: url(../img/landscape.gif);
+    background-position: center 0px;
+    margin-top: 10vh;
+}
+.data-text{
+    // display: block;
+    font-size: 1.7em; 
+    font-family: 'Oswald', sans-serif;
+    color: #C0CF3A;
+}
+.data-text a{
+    color: #C0CF3A;
+    text-decoration: none;
+}
+#addedText{
+    font-size: 1.7em; 
+    font-family: 'Oswald', sans-serif;
+    color: #C0CF3A;
+    z-index: 30;
+}
+#tryit_button{
+    text-decoration: none;
+    color: white;
+    background-color: #C0CF3A;
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+    padding: 10px 20px;
+    border-radius:10px;
+}
+#tryit_button:hover{
+    color:black;
+}
+#tryit{
+   padding: 100px 0;
+}
+#transparentLayer{
+    position: fixed;
+    width: 100vw;
+    margin: 0;
+    top: 0;
+    left: 0;
+    display: none;
+    background-image: url(../img/dots.gif);
+    height: 100vh;
+    opacity: 0.3;
+    z-index: 10;
+}
+
+// #addedText{
+//     position: absolute;
+//     top: 0;
+
+//     margin :{
+//         top: 50%;
+//         left: 20%;
+//         right: 20%;
+//     }
+
+//     display: none;
+//     background: white;
+//     width: 50vw;
+//     height: 50vh;
+//     z-index: 20;
+//     font-family: sans-serif;
+// }
+#modalbutton:hover{
+    color: #353535;
+}
+#BeyondtheDigital-highlight{
+    color: white;
+}
+// #dataSection{
+//     // height: 100vh;
+// }
+
+////////BALL BLINK/////////
+.ball-loader{
+  width: 60 + 0px;
+  height: (60 / 3) - 10px;
+  transform: translateX(-50%) translateY(-50%);
+  position: absolute;
+  left: 65vw;
+  margin-top: -1vh;
+}
+.ball-loader-ball{
+  will-change: transform;
+  height:(60 / 3) - 10px;
+  width: (60 / 3) - 10px;
+  border-radius: 50%;
+  background-color: #C0CF3A;
+  animation: grow 1s ease-in-out infinite alternate;
+
+  &.ball1{
+    left:0;
+    transform-origin: 100% 50%;
+  }
+}
+
+@keyframes grow{
+  to{
+    transform: translateX(-50%) scale(0);
+  }
+}
