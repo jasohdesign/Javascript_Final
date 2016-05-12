@@ -198,12 +198,12 @@ h2{
     transform: translateX(-50%) scale(0);
   }
 }
-#cemetary-window{
-  border-radius: 50px;
-  height: 30vh;
+#cemetary_window{
+  height: 70vh;
   background-image: url(../img/cemetary.png);
   background-position: center 0px;
   background-attachment: fixed;
   background-repeat: repeat-y;
   position: relative;
+  margin-bottom: 10vh;
 }

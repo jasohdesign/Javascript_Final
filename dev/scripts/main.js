@@ -67,7 +67,7 @@ window.onload = function () {
     };
 
     // var cemetary_window = document.getElementById('cemetary_window');
-    //CEMETARY SCROLL
+    // //CEMETARY SCROLL
     // function translateCircles() {
     //     var offset = (Math.min(-120, pageYOffset - container.offsetTop));
 
