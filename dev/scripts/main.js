@@ -23,20 +23,11 @@ window.onload = function () {
     transparentLayer.id = 'transparentLayer';
     body.appendChild(transparentLayer);
 
-   //MODAL BOX
-    // var addedText = document.createElement('div');
-    // addedText.id = 'addedText';
-    // // modalBox.textContent = 'This is modal.';
-    // addedText.appendChild(document.createTextNode('a single node'));
-    
-    // body.appendChild(addedText);
-
     var modalButton = document.getElementById('modalbutton');
-    var data_text_box = document.getElementById('data-text-box');
+
     //OPEN MODAL BOX FUNCTION
     function openModal () {
         transparentLayer.style.display = 'block';
-        data_text_box.style.height = '100vh';
     }
 
     //CHANGE DATA TEXT
@@ -74,6 +65,15 @@ window.onload = function () {
             exitModal();
         }
     };
+
+    // var cemetary_window = document.getElementById('cemetary_window');
+    //CEMETARY SCROLL
+    // function translateCircles() {
+    //     var offset = (Math.min(-120, pageYOffset - container.offsetTop));
+
+    //     firstImage.style.transform = 'translate('+ Math.abs(offset) +'px)';
+    //     secondImage.style.transform = 'translate('+ offset +'px)';
+    // }
 };
 
 
