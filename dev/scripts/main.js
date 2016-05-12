@@ -119,20 +119,6 @@ window.onload = function () {
     var blank = document.getElementsByClassName('blank');
     var partner = document.getElementsByClassName('partner');
 
-    function generateName(){
-        for (var i=0; i< name.length; i++){
-            name[i].style.color = 'white';
-            name[i].style.backgroundColor = 'black';
-            name[i].innerHTML = 'Jasmine Oh';
-        }
-    }
-    function generateLogindate(){
-        for (var i=0; i< last_login.length; i++){ 
-            last_login[i].style.color = 'white';
-            last_login[i].style.backgroundColor = 'black';
-            last_login[i].innerHTML = 'May 12,2016';
-        } 
-    }
     function replaceWords(){
         document.getElementById('number_of_friends').innerHTML = 'over 2,000';
         document.getElementById('birthday').innerHTML = 'June 16, 1992';
@@ -162,13 +148,67 @@ window.onload = function () {
         document.getElementById('family').innerHTML = 
         'brother Robin Oh';       
 
+    }
+    function backToOriginal(){
+        document.getElementById('number_of_friends').innerHTML = 'NUMBER OF FRIENDS';
+        document.getElementById('birthday').innerHTML = 'BIRTHDAY';
+        document.getElementById('obituaryName').innerHTML = 
+        'SAMPLE OBITUARY';
+        document.getElementById('hometown').innerHTML = 'HOMETOWN';
+        document.getElementById('location').innerHTML = 'LOCATION';
+        document.getElementById('moveDate').innerHTML = 'LIFE EVENT DATE';
+        document.getElementById('major').innerHTML = 
+        'MAJOR';
+        document.getElementById('group').innerHTML = 
+        'FACEBOOK GROUP';
+        document.getElementById('work').innerHTML = 
+        'LATEST WORK HISTORY';
+        document.getElementById('industry').innerHTML = 'INDUSTRY';
+        document.getElementById('event').innerHTML = 'EVENT';
+        document.getElementById('friends').innerHTML = 
+        'TAGGED FRIENDS';
+        document.getElementById('eventDate').innerHTML = 'DATE OF EVENT';
+        document.getElementById('ad').innerHTML = 'ADVERTISEMENT TAG';
+        document.getElementById('visited').innerHTML = 'CHECKED IN LOCATION';
+        document.getElementById('hobby').innerHTML = 'HOBBY TAG';
+        document.getElementById('relationship_status').innerHTML = 
+        'RELATIONSHIP STATUS';  
+        document.getElementById('relationship_duration').innerHTML = 
+        'RELATIONSHIP DURATION';
+        document.getElementById('family').innerHTML = 
+        'FAMILY MEMBER';       
 
     }
-    
+    function generateName(){
+        for (var i=0; i< name.length; i++){
+            name[i].innerHTML = 'Jasmine Oh';
+        }
+    }
+    function reverseName(){
+        for (var i=0; i< name.length; i++){
+            name[i].innerHTML = 'NAME';
+        }
+    }
+    function generateLogindate(){
+        for (var i=0; i< last_login.length; i++){ 
+            last_login[i].innerHTML = 'May 12,2016';
+        } 
+    }
+    function reverseLogindate(){
+        for (var i=0; i< last_login.length; i++){ 
+            last_login[i].innerHTML = 'LAST LOGGED IN DATE';
+        } 
+    }
     function changeStyle(){
         for (var i=0; i< blank.length; i++){ 
             blank[i].style.color = 'white';
             blank[i].style.backgroundColor = 'black';    
+        } 
+    }
+    function reverseStyle(){
+        for (var i=0; i< blank.length; i++){ 
+            blank[i].style.color = 'black';
+            blank[i].style.backgroundColor = '#C0CF3A';    
         } 
     }
     function generateEducation(){
@@ -176,14 +216,29 @@ window.onload = function () {
             education[i].innerHTML = 'Parsons School of Design';
         } 
     }
+    function reverseEducation(){
+        for (var i=0; i< education.length; i++){ 
+            education[i].innerHTML = 'EDUCATION HISTORY';
+        } 
+    }
     function generateAcheivement(){
         for (var i=0; i< achievement.length; i++){ 
             achievement[i].innerHTML = 'Candy Crush';
         } 
     }
+    function reverseAchievement(){
+        for (var i=0; i< achievement.length; i++){ 
+            achievement[i].innerHTML = 'ACHEIVEMENT';
+        } 
+    }
     function generatePartnername(){
         for (var i=0; i< partner.length; i++){ 
             partner[i].innerHTML = 'Sophia Garrow';
+        } 
+    }
+    function reversePartnername(){
+        for (var i=0; i< partner.length; i++){ 
+            partner[i].innerHTML = 'RELATIONSHIP PARTNER';
         } 
     }
     tryit.addEventListener('click', function(e){
@@ -194,9 +249,28 @@ window.onload = function () {
         generateEducation();
         generateAcheivement();
         generatePartnername();
-        changeStyle();
+        changeButtonText();
     },false);
 
+    function changeButtonText(){
+        if (document.getElementById('tryit_button').innerHTML == 
+        'GENERATE'){
+            document.getElementById('tryit_button').innerHTML = 
+            'BACK';
+            changeStyle();
+        }else{
+            document.getElementById('tryit_button').innerHTML = 
+            'GENERATE';
+            backToOriginal();
+            reverseStyle();
+            reverseEducation();
+            reverseAchievement();
+            reversePartnername();
+            reverseName();
+            reverseLogindate();
+        }
+          
+    }
     
 };
 
